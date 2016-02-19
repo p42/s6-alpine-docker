@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/with-contenv /bin/sh
 
 set -e
 

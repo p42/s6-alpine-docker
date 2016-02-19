@@ -1,5 +1,0 @@
-#!/bin/execlineb -S0
-/bin/exec -c --
-/bin/s6-envdir -fn -- /var/run/s6/container_environment
-/bin/exec --
-$@
