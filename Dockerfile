@@ -1,7 +1,7 @@
 FROM gliderlabs/alpine
 MAINTAINER Jordan Clark jordan.clark@esu10.org
 
-ENV S6_OVERLAY_VERSION 1.18.1.1
+ENV S6_OVERLAY_VERSION 1.18.1.2
 
 RUN apk add --no-cache wget ca-certificates && \
 apk --no-cache --update upgrade && \
