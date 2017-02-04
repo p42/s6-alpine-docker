@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine
+FROM alpine:3.5
 MAINTAINER Jordan Clark jordan.clark@esu10.org
 
 ENV S6_OVERLAY_VERSION 1.19.1.1
