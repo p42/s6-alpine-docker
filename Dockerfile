@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.6
 MAINTAINER Jordan Clark jordan.clark@esu10.org
 
 ENV S6_OVERLAY_VERSION 1.20.0.0

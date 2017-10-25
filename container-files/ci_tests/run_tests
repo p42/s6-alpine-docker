@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+apk add --no-cache bash
+
+/ci_tests/run_tests.real $1
+
+apk del -q bash
