@@ -1,5 +1,5 @@
 FROM alpine:3.3
-MAINTAINER Jordan Clark jordan.clark@esu10.org
+MAINTAINER Jordan Clark mail@jordanclark.us
 
 ENV S6_OVERLAY_VERSION 1.21.4.0
 ENV S6_OVERLAY_MD5HASH 3eb36dc6524522d8c637106ce74ded18
