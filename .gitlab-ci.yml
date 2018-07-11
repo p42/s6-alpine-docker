@@ -11,6 +11,8 @@ before_script:
   - docker info
 
 build-master:
+  tags:
+    - docker
   stage: build
   script:
     - git checkout master
@@ -19,6 +21,8 @@ build-master:
     - master
 
 build:
+  tags:
+    - docker
   stage: build
   script:
     - git checkout ${CI_COMMIT_REF_NAME}
@@ -27,6 +31,8 @@ build:
     - master
 
 test-master:
+  tags:
+    - docker
   stage: test
   script:
     - docker run --rm "${IMAGE_NAME}:latest" /ci_tests/run_tests system
@@ -34,6 +40,8 @@ test-master:
     - master
 
 test:
+  tags:
+    - docker
   stage: test
   script:
     - docker run --rm "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}" /ci_tests/run_tests system
@@ -41,6 +49,9 @@ test:
     - master
 
 deploy_to_github-master:
+  tags:
+    - docker
+    - github-key
   stage: deploy
   script:
     - git checkout master
@@ -49,6 +60,9 @@ deploy_to_github-master:
     - master
 
 deploy_to_github:
+  tags:
+    - docker
+    - github-key
   stage: deploy
   script:
     - git checkout ${CI_COMMIT_REF_NAME}
@@ -57,6 +71,9 @@ deploy_to_github:
     - master
 
 deploy_tags_to_github:
+  tags:
+    - docker
+    - github-key
   stage: deploy
   script:
     - git checkout ${CI_COMMIT_REF_NAME}
