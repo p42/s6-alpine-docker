@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM alpine:3.4
 MAINTAINER Jordan Clark mail@jordanclark.us
 
