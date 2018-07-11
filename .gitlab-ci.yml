@@ -41,7 +41,8 @@ test-master:
 
 test:
   tags:
-    - docker  stage: test
+    - docker
+  stage: test
   script:
     - docker run --rm "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}" /ci_tests/run_tests system
   except:
