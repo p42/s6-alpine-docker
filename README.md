@@ -6,7 +6,7 @@
 A docker image based on Alpine Linux with the s6 process supervisor
 
 ### What is Alpine Linux?
-Alpine Linux is an independent, non-commercial, general purpose Linux distribution designed for power users who appreciate security, simplicity and resource efficiency. Alpine Linux prides itself on being small, simple and secure. 
+Alpine Linux is an independent, non-commercial, general purpose Linux distribution designed for power users who appreciate security, simplicity and resource efficiency. Alpine Linux prides itself on being small, simple and secure.
 
 ### What is the s6-overlay?
 The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a series of init scripts and utilities to ease creating Docker images using s6 as a process supervisor.  The s6-overlay makes it easy to take advantages of s6 while still operate like other Docker images.  The s6 init system provides many helpful tools to initialize and manage processes as the Docker container starts.
@@ -82,10 +82,10 @@ ENTRYPOINT ["/init"]
 
 ### Shell Access
 
-This image includes the bash shell and when running in detached mode can be connected to with:
+This image includes the sh shell and when running in detached mode can be connected to with:
 
 ~~~
-docker exec -ti <container> bash
+docker exec -ti <container> sh
 ~~~
 
 
