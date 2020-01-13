@@ -24,6 +24,8 @@ The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a ser
 | 3.3 | Latest Alpine Linux 3.3 series |
 | edge | Latest Alpine Linux edge series |
 | 3.8.0 | Alpine Linux 3.8.0 built on 2018-07-30 |
+| 3.8.4 | Alpine Linux 3.8.4 built on 2019-01-13 |
+| 1.21.8.0 | Alpine Linux 3.8 with S6 Overlay v1.21.8.0 built on 2019-01-13 |
 | 1.21.4.0 | Alpine Linux 3.7 with S6 Overlay v1.21.4.0 built on 2018-07-12 |
 | 1.20.0.0 | Alpine Linux 3.6 with S6 Overlay v1.20.0.0 built on 2017-09-26 |
 | 1.19.1.1 | Alpine Linux 3.4 with S6 Overlay v1.19.1.1 built on 2017-02-02 |
