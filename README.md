@@ -16,6 +16,9 @@ The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a ser
 | Tag | Description |
 |---|---|
 | latest | The most current build.  Images based on latest may change often an possibly could break.  Test your images |
+| 3.11 | Latest Alpine Linux 3.11 series |
+| 3.10 | Latest Alpine Linux 3.10 series |
+| 3.9 | Latest Alpine Linux 3.9 series |
 | 3.8 | Latest Alpine Linux 3.8 series |
 | 3.7 | Latest Alpine Linux 3.7 series |
 | 3.6 | Latest Alpine Linux 3.6 series |
@@ -23,8 +26,18 @@ The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a ser
 | 3.4 | Latest Alpine Linux 3.4 series |
 | 3.3 | Latest Alpine Linux 3.3 series |
 | edge | Latest Alpine Linux edge series |
-| 3.8.0 | Alpine Linux 3.8.0 built on 2018-07-30 |
+| 3.11.2 | Alpine Linux 3.11.2 built on 2019-01-13 |
+| 3.10.3 | Alpine Linux 3.10.3 built on 2019-01-13 |
+| 3.9.4 | Alpine Linux 3.9.4 built on 2019-01-13 |
 | 3.8.4 | Alpine Linux 3.8.4 built on 2019-01-13 |
+| 3.8.0 | Alpine Linux 3.8.0 built on 2018-07-30 |
+| 3.7.3 | Alpine Linux 3.7.3 built on 2019-01-13 |
+| 3.6.5 | Alpine Linux 3.6.5 built on 2019-01-13 |
+| 3.5.3 | Alpine Linux 3.5.3 built on 2019-01-13 |
+| 3.4.6 | Alpine Linux 3.4.6 built on 2019-01-13 |
+| 3.3.3 | Alpine Linux 3.3.3 built on 2019-01-13 |
+| 1.22.1.0 | Alpine Linux 3.11 with S6 Overlay v1.22.1.0 built on 2019-01-13 |
+| 1.22.0.0 | Alpine Linux 3.10 with S6 Overlay v1.22.0.0 built on 2019-01-13 |
 | 1.21.8.0 | Alpine Linux 3.8 with S6 Overlay v1.21.8.0 built on 2019-01-13 |
 | 1.21.4.0 | Alpine Linux 3.7 with S6 Overlay v1.21.4.0 built on 2018-07-12 |
 | 1.20.0.0 | Alpine Linux 3.6 with S6 Overlay v1.20.0.0 built on 2017-09-26 |
