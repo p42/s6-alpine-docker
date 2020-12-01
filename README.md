@@ -37,6 +37,7 @@ The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a ser
 | 3.5.3 | Alpine Linux 3.5.3 built on 2019-01-13 |
 | 3.4.6 | Alpine Linux 3.4.6 built on 2019-01-13 |
 | 3.3.3 | Alpine Linux 3.3.3 built on 2019-01-13 |
+| 2.1.0.0 | Alpine Linux 3.12 with S6 Overlay v2.1.0.0 built on 2020-11-30 |
 | 2.0.0.1 | Alpine Linux 3.12 with S6 Overlay v2.0.0.1 built on 2020-11-30 |
 | 2.0.0.0 | Alpine Linux 3.12 with S6 Overlay v2.0.0.0 built on 2020-11-30 |
 | 1.22.1.0 | Alpine Linux 3.11 with S6 Overlay v1.22.1.0 built on 2019-01-13 |
