@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.13
 MAINTAINER Jordan Clark mail@jordanclark.us
 
 ENV S6_OVERLAY_VERSION 2.2.0.1
