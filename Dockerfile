@@ -1,8 +1,8 @@
 FROM alpine:edge
 MAINTAINER Jordan Clark mail@jordanclark.us
 
-ENV S6_OVERLAY_VERSION 2.1.0.2
-ENV S6_OVERLAY_MD5HASH 7e81e28fcb4d882d2fbc6c7f671758e2
+ENV S6_OVERLAY_VERSION 2.2.0.0
+ENV S6_OVERLAY_MD5HASH 7aa8699c0e3c519a4bda93f511cccbdd
 
 COPY container-files /
 
