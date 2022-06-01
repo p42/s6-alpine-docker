@@ -5,7 +5,9 @@ stages:
 
 variables:
   IMAGE_NAME: "s6-alpine"
+  IMAGE_TAG: "latest"
   GITHUB_PROJECT: "p42/s6-alpine-docker.git"
+  DOCKER_HUB_IMAGE: "project42/s6-alpine"
 
 before_script:
   - docker info
@@ -16,6 +18,7 @@ build-master:
   stage: build
   script:
     - git checkout master
+    - git pull
     - docker build --pull -t "${IMAGE_NAME}:latest" .
   only:
     - master
@@ -26,6 +29,7 @@ build:
   stage: build
   script:
     - git checkout ${CI_COMMIT_REF_NAME}
+    - git pull
     - docker build --pull -t "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}" .
   except:
     - master
@@ -80,3 +84,31 @@ deploy_tags_to_github:
     - git push git@github.com:${GITHUB_PROJECT} ${CI_COMMIT_REF_NAME} --tags
   only:
     - tags
+
+push_to_docker_hub-master:
+  tags:
+    - docker
+    - docker-hub
+    - docker-pushrm
+  stage: deploy
+  script:
+    - docker image tag ${IMAGE_NAME}:latest ${DOCKER_HUB_IMAGE}:latest
+    - docker push ${DOCKER_HUB_IMAGE}:latest
+    - git checkout ${CI_COMMIT_REF_NAME}
+    - docker pushrm ${DOCKER_HUB_IMAGE}:latest
+  only:
+    - master
+
+push_to_docker_hub:
+  tags:
+    - docker
+    - docker-hub
+    - docker-pushrm
+  stage: deploy
+  script:
+    - docker image tag ${IMAGE_NAME}:${CI_COMMIT_REF_NAME} ${DOCKER_HUB_IMAGE}:${CI_COMMIT_REF_NAME}
+    - docker push ${DOCKER_HUB_IMAGE}:${CI_COMMIT_REF_NAME}
+    - git checkout ${CI_COMMIT_REF_NAME}
+    - docker pushrm ${DOCKER_HUB_IMAGE}:${CI_COMMIT_REF_NAME}
+  except:
+    - master
