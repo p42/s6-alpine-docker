@@ -1,5 +1,8 @@
 FROM alpine:3.17
 
+ARG BUILD_DATE
+ARG VCS_REF
+
 LABEL maintainer="mail@jordanclark.us" \
     org.opencontainers.image.title="s6-alpine" \
     org.opencontainers.image.description="Alpine Base with S6 Overlay" \
