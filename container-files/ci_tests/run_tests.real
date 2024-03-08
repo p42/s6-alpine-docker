@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bash
+#!/command/with-contenv bash
 
 # This file is used for tests specific to the master branch.
 # The CI Test structure is to call a single test file that iterates a directory of individual tests.
