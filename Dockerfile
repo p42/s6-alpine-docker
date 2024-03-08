@@ -1,12 +1,20 @@
 FROM alpine:edge
-MAINTAINER Jordan Clark mail@jordanclark.us
+
+LABEL maintainer="mail@jordanclark.us" \
+    org.opencontainers.image.title="s6-alpine" \
+    org.opencontainers.image.description="Alpine Base with S6 Overlay" \
+    org.opencontainers.image.authors="mail@jordanclark.us" \
+    org.opencontainers.image.vendor="Alpine" \
+    org.opencontainers.image.documentation="https://docs.alpinelinux.org" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://alpinelinux.org" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
 
 ARG arch=x86_64
 ARG s6_overlay_version=3.1.6.2
 ARG s6_overlay_arch_hash=9c782f0c8ace291fb8d30be8ed748271
 ARG s6_overlay_noarch_hash=d11e1acb32daa8f370048d621fb12685
-
-# ENV ARCH=${arch}
 
 COPY container-files /
 
