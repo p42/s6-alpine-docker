@@ -1,17 +1,33 @@
 FROM alpine:3.18
-MAINTAINER Jordan Clark mail@jordanclark.us
 
-ENV S6_OVERLAY_VERSION 2.2.0.3
-ENV S6_OVERLAY_MD5HASH e49a47715f5f187928c98e6eaba41a39
+LABEL maintainer="mail@jordanclark.us" \
+    org.opencontainers.image.title="s6-alpine" \
+    org.opencontainers.image.description="Alpine Base with S6 Overlay" \
+    org.opencontainers.image.authors="mail@jordanclark.us" \
+    org.opencontainers.image.vendor="Alpine" \
+    org.opencontainers.image.documentation="https://docs.alpinelinux.org" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://alpinelinux.org" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
+
+ARG arch=x86_64
+ARG s6_overlay_version=3.1.6.2
+ARG s6_overlay_arch_hash=9c782f0c8ace291fb8d30be8ed748271
+ARG s6_overlay_noarch_hash=d11e1acb32daa8f370048d621fb12685
 
 COPY container-files /
 
 RUN apk add --no-cache wget ca-certificates && \
 apk --no-cache --update upgrade && \
 cd /tmp && \
-wget https://github.com/just-containers/s6-overlay/releases/download/v$S6_OVERLAY_VERSION/s6-overlay-amd64.tar.gz && \
-echo "$S6_OVERLAY_MD5HASH *s6-overlay-amd64.tar.gz" | md5sum -c - && \
-tar xzf s6-overlay-amd64.tar.gz -C / && \
-rm s6-overlay-amd64.tar.gz
+wget https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_version}/s6-overlay-noarch.tar.xz && \
+echo "${s6_overlay_noarch_hash} *s6-overlay-noarch.tar.xz" | md5sum -c - && \
+wget https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_version}/s6-overlay-${arch}.tar.xz && \
+echo "${s6_overlay_arch_hash} *s6-overlay-${arch}.tar.xz" | md5sum -c - && \
+tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
+tar -C / -Jxpf /tmp/s6-overlay-${arch}.tar.xz && \
+rm s6-overlay-noarch.tar.xz && \
+rm s6-overlay-${arch}.tar.xz
 
 ENTRYPOINT ["/init"]
