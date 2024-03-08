@@ -1,0 +1,2 @@
+foreground { echo "/etc/s6-overlay/scripts/settimezone.sh..." }
+/etc/s6-overlay/scripts/settimezone.sh
