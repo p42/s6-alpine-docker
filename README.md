@@ -16,6 +16,11 @@ The [s6-overlay project](https://github.com/just-containers/s6-overlay) is a ser
 | Tag | Description |
 |---|---|
 | latest | The most current build.  Images based on latest may change often an possibly could break.  Test your images |
+| 3.19 | Latest Alpine Linux 3.14 series |
+| 3.18 | Latest Alpine Linux 3.14 series |
+| 3.17 | Latest Alpine Linux 3.14 series |
+| 3.16 | Latest Alpine Linux 3.14 series |
+| 3.15 | Latest Alpine Linux 3.14 series |
 | 3.14 | Latest Alpine Linux 3.14 series |
 | 3.13 | Latest Alpine Linux 3.13 series |
 | 3.12 | Latest Alpine Linux 3.12 series |
